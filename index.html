@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WFP Next Shift Recommender v4</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Next Shift Recommender</h1>
+  <p class="muted">A sidecar tool for member-leaders making relational follow-up calls after someone completes an event. v4 adds Daisychain contact lookup and call-outcome logging scaffolding.</p>
+</header>
+<main>
+  <section class="card panel">
+    <h2>Call context</h2>
+    <label for="dataMode">Data mode</label>
+    <select id="dataMode">
+      <option value="demo">Demo sample data</option>
+      <option value="live">Live Mobilize API</option>
+    </select>
+    <p id="modeHelp" class="muted"></p>
+    <div id="orgIdWrap">
+      <label for="orgId">Mobilize organization ID</label>
+      <input id="orgId" placeholder="Numeric org ID">
+      <p class="muted small">Confirm the WFP numeric org ID in Mobilize before production.</p>
+    </div>
+
+    <div class="subpanel">
+      <h3>Optional: pull contact from Daisychain</h3>
+      <label for="contactMode">Contact source</label>
+      <select id="contactMode">
+        <option value="manual">Manual entry</option>
+        <option value="demo">Demo Daisychain contacts</option>
+        <option value="live">Live Daisychain API</option>
+      </select>
+      <div class="row">
+        <div><label for="lookupPhone">Phone</label><input id="lookupPhone" placeholder="+15555551234"></div>
+        <div><label for="lookupEmail">Email</label><input id="lookupEmail" placeholder="name@example.org"></div>
+      </div>
+      <button class="secondary full" id="findContactBtn" type="button">Find contact</button>
+      <div id="contactStatus" class="muted small lookup-status">Manual mode: enter the caller context below.</div>
+    </div>
+    <div class="row">
+      <div><label for="firstName">First name</label><input id="firstName" value="Ana"></div>
+      <div><label for="zip">ZIP</label><input id="zip" value="19143"></div>
+    </div>
+    <div class="row">
+      <div><label for="state">State</label><input id="state" value="PA" maxlength="2"></div>
+      <div><label for="experience">How did the shift go?</label><select id="experience"><option value="GOOD">Good</option><option value="OK">OK</option><option value="UNKNOWN">Unknown</option><option value="BAD">Bad</option></select></div>
+    </div>
+    <label for="completedType">Completed event type</label>
+    <select id="completedType">
+      <option value="CANVASS">Canvass</option>
+      <option value="COMMUNITY_CANVASS">Community canvass</option>
+      <option value="PHONE_BANK">Phone bank</option>
+      <option value="TEXT_BANK">Text bank</option>
+      <option value="FRIEND_TO_FRIEND_OUTREACH">Friend-to-friend outreach</option>
+      <option value="VOTER_REG">Voter registration</option>
+      <option value="MEETING">Meeting</option>
+      <option value="TRAINING">Training</option>
+      <option value="OTHER">Other</option>
+    </select>
+    <label for="completedTitle">Completed event title</label>
+    <input id="completedTitle" value="South Philly Canvass for Working Families Champions">
+    <div class="row">
+      <div><label for="virtualOk">Virtual OK?</label><select id="virtualOk"><option value="UNKNOWN">Unknown</option><option value="YES">Yes</option><option value="NO">No</option></select></div>
+      <div><label for="availability">Known availability</label><input id="availability" placeholder="Sat afternoons, weeknights"></div>
+    </div>
+    <label for="notes">Conversation notes</label>
+    <textarea id="notes" placeholder="What they liked, hesitations, schedule, mobility/access needs, etc."></textarea>
+    <label class="inline"><input type="checkbox" id="includeLowerPriority"> Include meetings/trainings if they score well</label>
+    <button class="primary" id="recommendBtn">Find next ask</button>
+    <div class="notice">MVP principle: the tool should always produce a concrete ask, while clearly flagging when there is no strong local match and keeping people in their own state whenever possible.</div>
+
+    <div class="subpanel">
+      <h3>Optional: save call outcome to Daisychain</h3>
+      <label for="outcome">Call result</label>
+      <select id="outcome">
+        <option value="signed_up">Signed up</option>
+        <option value="interested_follow_up">Interested, follow up later</option>
+        <option value="not_interested">Not interested</option>
+        <option value="left_voicemail">Left voicemail</option>
+        <option value="no_answer">No answer</option>
+        <option value="bad_contact">Bad contact / wrong number</option>
+        <option value="already_active">Already active</option>
+      </select>
+      <label class="inline"><input type="checkbox" id="relationalCallCompleted" checked> Mark relational call completed</label>
+      <label for="outcomeNotes">Outcome notes</label>
+      <textarea id="outcomeNotes" placeholder="Short notes from the call"></textarea>
+      <button class="secondary full" id="saveOutcomeBtn" type="button">Save outcome</button>
+      <div id="outcomeStatus" class="muted small lookup-status">Demo mode will simulate saving. Live mode uses the secure serverless proxy.</div>
+    </div>
+  </section>
+  <section class="stack">
+    <div id="status" class="card status">Use demo mode to test the recommendation flow right away.</div>
+    <div id="results" class="results"></div>
+    <div id="debug"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

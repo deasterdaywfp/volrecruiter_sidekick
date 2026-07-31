@@ -1,0 +1,130 @@
+{
+  "data": [
+    {
+      "id": 1001,
+      "title": "South Philly Canvass for Working Families Champions",
+      "event_type": "CANVASS",
+      "browser_url": "https://www.mobilize.us/workingfamilies/event/1001/",
+      "high_priority": false,
+      "is_virtual": false,
+      "location": {
+        "locality": "Philadelphia",
+        "region": "PA",
+        "postal_code": "19143"
+      },
+      "timeslots": [
+        {
+          "id": 501,
+          "start_date": 1781373600,
+          "end_date": 1781388000,
+          "is_full": false
+        }
+      ]
+    },
+    {
+      "id": 1002,
+      "title": "PA WFP Virtual Phone Bank",
+      "event_type": "PHONE_BANK",
+      "browser_url": "https://www.mobilize.us/workingfamilies/event/1002/",
+      "high_priority": true,
+      "is_virtual": true,
+      "location": {
+        "locality": "",
+        "region": "PA",
+        "postal_code": ""
+      },
+      "timeslots": [
+        {
+          "id": 502,
+          "start_date": 1781456400,
+          "end_date": 1781467200,
+          "is_full": false
+        }
+      ]
+    },
+    {
+      "id": 1003,
+      "title": "Working Families Party Mass Call: What's Next",
+      "event_type": "MEETING",
+      "browser_url": "https://www.mobilize.us/workingfamilies/event/1003/",
+      "high_priority": false,
+      "is_virtual": true,
+      "location": {
+        "locality": "",
+        "region": "",
+        "postal_code": ""
+      },
+      "timeslots": [
+        {
+          "id": 503,
+          "start_date": 1781542800,
+          "end_date": 1781550000,
+          "is_full": false
+        }
+      ]
+    },
+    {
+      "id": 1004,
+      "title": "National Friend-to-Friend Outreach Party",
+      "event_type": "FRIEND_TO_FRIEND_OUTREACH",
+      "browser_url": "https://www.mobilize.us/workingfamilies/event/1004/",
+      "high_priority": false,
+      "is_virtual": true,
+      "location": {
+        "locality": "",
+        "region": "",
+        "postal_code": ""
+      },
+      "timeslots": [
+        {
+          "id": 504,
+          "start_date": 1781629200,
+          "end_date": 1781640000,
+          "is_full": false
+        }
+      ]
+    },
+    {
+      "id": 1005,
+      "title": "Lancaster Weekend Canvass",
+      "event_type": "CANVASS",
+      "browser_url": "https://www.mobilize.us/workingfamilies/event/1005/",
+      "high_priority": true,
+      "is_virtual": false,
+      "location": {
+        "locality": "Lancaster",
+        "region": "PA",
+        "postal_code": "17602"
+      },
+      "timeslots": [
+        {
+          "id": 505,
+          "start_date": 1781715600,
+          "end_date": 1781730000,
+          "is_full": false
+        }
+      ]
+    },
+    {
+      "id": 1006,
+      "title": "Camden Canvass for Working Families Champions",
+      "event_type": "CANVASS",
+      "browser_url": "https://www.mobilize.us/workingfamilies/event/1006/",
+      "high_priority": true,
+      "is_virtual": false,
+      "location": {
+        "locality": "Camden",
+        "region": "NJ",
+        "postal_code": "08103"
+      },
+      "timeslots": [
+        {
+          "id": 506,
+          "start_date": 1781802000,
+          "end_date": 1781816400,
+          "is_full": false
+        }
+      ]
+    }
+  ]
+}
