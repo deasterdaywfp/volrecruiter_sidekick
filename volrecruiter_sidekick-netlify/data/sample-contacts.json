@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "id": "demo-person-001",
+      "first_name": "Ana",
+      "last_name": "Rivera",
+      "email_address": "ana@example.org",
+      "phone_number": "+12155550191",
+      "postal_code": "19143",
+      "state": "PA",
+      "last_completed_event_title": "South Philly Canvass for Working Families Champions",
+      "last_completed_event_type": "CANVASS",
+      "last_event_experience": "GOOD",
+      "virtual_ok": "YES",
+      "relational_call_completed": false,
+      "notes": "Liked talking to neighbors; prefers Saturday afternoons."
+    },
+    {
+      "id": "demo-person-002",
+      "first_name": "Malik",
+      "last_name": "Johnson",
+      "email_address": "malik@example.org",
+      "phone_number": "+13125550177",
+      "postal_code": "60647",
+      "state": "IL",
+      "last_completed_event_title": "Intro Phonebank for Working Families",
+      "last_completed_event_type": "PHONE_BANK",
+      "last_event_experience": "OK",
+      "virtual_ok": "YES",
+      "relational_call_completed": false,
+      "notes": "New to phonebanking; wants a concrete script and short shifts."
+    },
+    {
+      "id": "demo-person-003",
+      "first_name": "Tasha",
+      "last_name": "Green",
+      "email_address": "tasha@example.org",
+      "phone_number": "+13135550126",
+      "postal_code": "48202",
+      "state": "MI",
+      "last_completed_event_title": "Detroit Community Meeting",
+      "last_completed_event_type": "MEETING",
+      "last_event_experience": "UNKNOWN",
+      "virtual_ok": "UNKNOWN",
+      "relational_call_completed": false,
+      "notes": "Interested in local candidate work."
+    }
+  ]
+}

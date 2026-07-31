@@ -1,0 +1,14 @@
+{
+  "mobilizeOrgId": "REPLACE_WITH_NUMERIC_ORG_ID",
+  "mobilizeSlug": "workingfamilies",
+  "endorsedCandidateActionUrl": "https://www.mobilize.us/workingfamilies/event/952158/",
+  "nationalVirtualFallbackUrl": "https://www.mobilize.us/workingfamilies/?event_type=1&event_type=2&event_type=38&event_type=12&event_type=21&is_virtual=true&show_all_events=true",
+  "defaultRadiusMiles": 60,
+  "nearbyRadiusMiles": 100,
+  "daisychainBaseUrl": "https://go.daisychain.app",
+  "daisychainActionType": "next_shift_recommendation_call",
+  "requiredServerEnv": [
+    "DAISYCHAIN_API_TOKEN",
+    "MOBILIZE_ORG_ID"
+  ]
+}
